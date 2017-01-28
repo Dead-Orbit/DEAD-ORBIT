@@ -2,7 +2,7 @@
 
 ## It's a JSON
 
-If you don't know nothing about JSON, please spend some of your time on learning JSON structure.
+If you don't know anything about JSON, please, spend some of your time on learning JSON structure.
 
 Recommended sources:
 
@@ -16,7 +16,7 @@ Before using of Webhooks you must to know the structure. All elements listed her
 ```ini
 `element` : `[data type]` - description
 
-[string] - text. Markdown Syntax
+[string] - text. Supports Markdown Syntax
 [url of image] - just a link. Example: `http://www.w3schools.com/html/pic_mountain.jpg`
 [url of website] - link too. Example: `http://www.google.com/`
 [array] - comma-separated elements. Example: [{"color":15424},{"color":56133}]
@@ -40,7 +40,7 @@ Before using of Webhooks you must to know the structure. All elements listed her
   * `fields` : `[array]` - array of embed field objects
     * `name` : `[string]` - name of the field
     * `value` : `[string]` - value of the field
-    * `inline` : `[bool]` - if true fields will be displayed in same line but there can be max 3 in same line or max 2 if you used thumbnail
+    * `inline` : `[bool]` - if `true` then fields will be displayed in same line but there can be max 3 in same line or max 2 if you used thumbnail
   * `thumbnail` : `[object]` - embed thumbnail object
     * `url` : `[url of image]` - url of thumbnail
   * `image` : `[object]` - embed image object
@@ -136,13 +136,13 @@ Go to [IFTTT](https://ifttt.com/) and create an account (if you don't already ha
 1. Paste your *Webhook URL* to **URL** field
 1. Select `POST` method
 1. Select `application/json` content type
-1. And now the hardest part™. You need to create your JSON body. Follow the structure, use it as example and don't forget about common sense. Press `Ingredients+` button and put them into appropriate fields If something says `URL` put it in "url", if something says `Image` try to put that into `"image": {"url":""}`. You need to put all objects into curly braces `{ }`. There no universal solution
+1. And now the hardest part™. You need to create your JSON body. Follow the structure, use it as example and don't forget about common sense. Press `+ Ingredient` button and put them into appropriate fields If something says `URL` put it in "url", if something says `Image` try to put that into `"image": {"url":""}`. You need to put all objects into curly braces `{ }`. There no universal solution
 1. Press `Create Action` and then `Finish`
 1. Done!
 
 ## Tips
 
-* Don't forget to check your JSON body with JSON validator. If you don't know any use next ones:
+* Don't forget to check your JSON body with JSON validator. If you don't know any use one of next ones:
   * [JSON Formatter](http://jsonformatter.org/)
   * [JSONLint](http://jsonlint.com/)
   * [JSON Editor Online](http://www.jsoneditoronline.org/)
