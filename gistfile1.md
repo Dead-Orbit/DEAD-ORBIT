@@ -151,9 +151,9 @@ Go to [IFTTT](https://ifttt.com/) and create an account (if you don't already ha
 * If you don't know how to use JSON check this [guide](https://learnxinyminutes.com/docs/json/).
 * Too hard? Use [picture guide](https://imgur.com/a/Zkdgo) instead!
 
-### Examples
+## Examples
 
-#### Reddit
+### Reddit
 
 ```json
 {
