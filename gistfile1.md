@@ -11,7 +11,7 @@ Recommended sources:
 
 ## Structure of Webhooks
 
-Before using of Webhooks you must to know the structure. All elements listed here are *optional* but you still must use `content` or `embeds` object at least once. This is a minimal requirement.
+Before using of Webhooks you have to know the structure. All elements listed here are *optional* but you still need use `content` or `embeds` object at least once. This is a minimal requirement.
 
 ```ini
 `element` : `[data type]` - description
@@ -22,34 +22,34 @@ Before using of Webhooks you must to know the structure. All elements listed her
 [array] - comma-separated elements. Example: [{"color":15424},{"color":56133}]
 [number] - just a number. Example: 555555, duh...
 [bool] - boolean... Can be true or false only. Example: "inline" : true
-[object] - something you don't must worry about
+[object] - something you don't need to worry about
 ```
 
-* `username` : `[string]` - if used, overrides the default username of the webhook
-* `avatar_url` : `[url of image]` - if used, overrides the default avatar of the webhook
-* `content` : `[string]` - simple message, the message contents (up to 2000 characters)
-* `embeds` : `[array]` - array of embed objects. That means you can use more than one in same body
+* `username` : `[string]` - if used, it overrides the default username of the webhook
+* `avatar_url` : `[url of image]` - if used, it overrides the default avatar of the webhook
+* `content` : `[string]` - simple message, the message contains (up to 2000 characters)
+* `embeds` : `[array]` - array of embed objects. That means, you can use more than one in same body
   * `author` : `[object]` - embed author object
     * `name` : `[string]` - name of author
-    * `url` : `[url of website]` - url of author. If used `name` become hyperlink
+    * `url` : `[url of website]` - url of author. If `name` was used, it becomes a hyperlink
     * `icon_url` : `[url of image]` - url of author icon
   * `title` : `[string]` - title of embed
-  * `url` : `[url of website]` - url of embed. If used `title` become hyperlink
+  * `url` : `[url of website]` - url of embed. If `title` was used, it becomes hyperlink
   * `description` : `[string]` - description text
-  * `color` : `[number]` - color code of the embed. You must to use Decimal numeral system, not Hexadecimal. Use [color picker](http://htmlcolorcodes.com/color-picker/) and [converter](http://www.binaryhexconverter.com/hex-to-decimal-converter)
+  * `color` : `[number]` - color code of the embed. You have to use Decimal numeral system, not Hexadecimal. Use [color picker](http://htmlcolorcodes.com/color-picker/) and [converter](http://www.binaryhexconverter.com/hex-to-decimal-converter)
   * `fields` : `[array]` - array of embed field objects
     * `name` : `[string]` - name of the field
     * `value` : `[string]` - value of the field
-    * `inline` : `[bool]` - if `true` then fields will be displayed in same line but there can be max 3 in same line or max 2 if you used thumbnail
+    * `inline` : `[bool]` - if true, fields will be displayed in same line, but there can only be 3 max in same line or 2 max if you used thumbnail
   * `thumbnail` : `[object]` - embed thumbnail object
     * `url` : `[url of image]` - url of thumbnail
   * `image` : `[object]` - embed image object
     * `url` : `[url of image]` - url of image
   * `footer` : `[object]` - embed footer object
-    * `text` : `[string]` - footer text, Doesn't support Markdown
+    * `text` : `[string]` - footer text, doesn't support Markdown
     * `icon_url` : `[url of image]` - url of footer icon
 
-### Example webhook
+### Example for a webhook
 
 ```json
 {
@@ -79,12 +79,12 @@ Before using of Webhooks you must to know the structure. All elements listed her
           "inline": true
         },
         {
-          "name": "Use `\"inline\": true` parameter if you want to write fields in same line.",
+          "name": "Use `\"inline\": true` parameter, if you want to display fields in same line.",
           "value": "okay..."
         },
         {
           "name": "Thanks!",
-          "value": "You welcome :wink:"
+          "value": "You're welcome :wink:"
         }
       ],
       "thumbnail": {
@@ -110,46 +110,45 @@ Before using of Webhooks you must to know the structure. All elements listed her
 
 ### Account on IFTTT
 
-Go to [IFTTT](https://ifttt.com/) and create an account (if you don't already have one).
+Visit [IFTTT](https://ifttt.com/) and create an account (if you don't already have one).
 
 ### Webhook on Discord
 
 1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**
-1. Setup name, avatar and channel for posting. Copy *Webhook URL*. **Do not share! Very dangerous!**
-1. Press **`Save`** and then **`Done`** button
+1. Setup name, avatar and the channel, where it will be posted. Copy *Webhook URL*. **Do not share! Very dangerous!**
+1. Click **`Save`** and then the **`Done`** button
 
-## Creating Applet
+## Creating an Applet
 
 ### If `this`
 
 1. Go to [My Applets](https://ifttt.com/my_applets)
-1. Press `[+]this`
-1. `Choose a service`. In theory you can use all of them. Some of them needs authefication (Twitter, Reddit, Youtube). Don't worry, it's safe ;)
-1. `Choose trigger`. Read description below every trigger and choose the needed one
+1. Click `[+]this`
+1. `Choose a service`. In theory you could use all of them. Some of them need authentification (Twitter, Reddit, Youtube). Don't worry, it's safe ;)
+1. `Choose the trigger`. Read the description below every trigger and choose the needed one
 1. `Complete trigger fields`
 
 ### Then `that`
 
-1. Press `[+]that`
-1. `Choose action service`. You need `Maker`. Use search bar
+1. Click `[+]that`
+1. `Choose the action service`. You need `Maker`. Use the search bar
 1. `Choose action`. Choose `Make a web request`
 1. Paste your *Webhook URL* to **URL** field
 1. Select `POST` method
 1. Select `application/json` content type
-1. And now the hardest part™. You need to create your JSON body. Follow the structure, use it as example and don't forget about common sense. Press `+ Ingredient` button and put them into appropriate fields If something says `URL` put it in "url", if something says `Image` try to put that into `"image": {"url":""}`. You need to put all objects into curly braces `{ }`. There no universal solution
-1. Press `Create Action` and then `Finish`
+1. And now the hardest part™. You need to create your JSON body. Follow the structure, use it as an example and don't forget about common sense. Press `+ Ingredient` button and put them into appropriate fields. If something says `URL` put it in "url", if something says `Image`, try to put that into `"image": {"url":""}`. You need to put all objects into curly braces `{ }`. There is no universal solution
+1. Click `Create Action` and then `Finish`
 1. Done!
 
 ## Tips
 
-* Don't forget to check your JSON body with JSON validator. If you don't know any use one of next ones:
+* Don't forget to check your JSON body with a JSON validator. If you don't know any use one of these:
   * [JSON Formatter](http://jsonformatter.org/)
   * [JSONLint](http://jsonlint.com/)
   * [JSON Editor Online](http://www.jsoneditoronline.org/)
-* If webhook *doesn't works* check logs for errors. **My Applets** -> *choose applet* -> *press on gear* -> __*View activity log*__. `Maker error` means your JSON body have errors.
-* Discord have built-in embeds for Twitter, Youtube and other sites so you can just add link to webhook: `{"content": "{{Link}}"}`.
-* If you don't know how to use JSON check this [guide](https://learnxinyminutes.com/docs/json/).
-* Too hard? Use [picture guide](https://imgur.com/a/Zkdgo) instead!
+* If the webhook *doesn't work* check logs for errors. **My Applets** -> *choose applet* -> *click gear* -> __*View activity log*__. `Maker error` means your JSON body have errors.
+* Discord has built-in embeds for Twitter, Youtube and other sites so you can just add the link to the webhook: `{"content": "{{Link}}"}`.
+* Too hard? Use the [picture guide](https://imgur.com/a/Zkdgo) instead!
 
 ## Examples
 
