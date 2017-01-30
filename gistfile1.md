@@ -2,7 +2,7 @@
 
 ## It's a JSON
 
-If you don't know anything about JSON, please, spend some of your time on learning JSON structure.
+If you don't know anything about JSON, please, spend some time on learning JSON structure.
 
 Recommended sources:
 
@@ -11,7 +11,7 @@ Recommended sources:
 
 ## Structure of Webhooks
 
-Before using of Webhooks you have to know the structure. All elements listed here are *optional* but you still need use `content` or `embeds` object at least once. This is a minimal requirement.
+Before using Webhooks you have to know the structure. All elements listed here are *optional* but you still need to use the `content` or `embeds` object at least once. This is the minimal requirement.
 
 ```ini
 `element` : `[data type]` - description
@@ -28,7 +28,7 @@ Before using of Webhooks you have to know the structure. All elements listed her
 * `username` : `[string]` - if used, it overrides the default username of the webhook
 * `avatar_url` : `[url of image]` - if used, it overrides the default avatar of the webhook
 * `content` : `[string]` - simple message, the message contains (up to 2000 characters)
-* `embeds` : `[array]` - array of embed objects. That means, you can use more than one in same body
+* `embeds` : `[array]` - array of embed objects. That means, you can use more than one in the same body
   * `author` : `[object]` - embed author object
     * `name` : `[string]` - name of author
     * `url` : `[url of website]` - url of author. If `name` was used, it becomes a hyperlink
@@ -79,7 +79,7 @@ Before using of Webhooks you have to know the structure. All elements listed her
           "inline": true
         },
         {
-          "name": "Use `\"inline\": true` parameter, if you want to display fields in same line.",
+          "name": "Use `\"inline\": true` parameter, if you want to display fields in the same line.",
           "value": "okay..."
         },
         {
@@ -146,7 +146,7 @@ Visit [IFTTT](https://ifttt.com/) and create an account (if you don't already ha
   * [JSON Formatter](http://jsonformatter.org/)
   * [JSONLint](http://jsonlint.com/)
   * [JSON Editor Online](http://www.jsoneditoronline.org/)
-* If the webhook *doesn't work* check logs for errors. **My Applets** -> *choose applet* -> *click gear* -> __*View activity log*__. `Maker error` means your JSON body have errors.
+* If the webhook *doesn't work*, check log for errors. **My Applets** -> *choose applet* -> *click gear* -> __*View activity log*__. `Maker error` means your JSON body has errors.
 * Discord has built-in embeds for Twitter, Youtube and other sites so you can just add the link to the webhook: `{"content": "{{Link}}"}`.
 * Too hard? Use the [picture guide](https://imgur.com/a/Zkdgo) instead!
 
