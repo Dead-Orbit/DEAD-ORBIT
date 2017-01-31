@@ -110,7 +110,7 @@ Before using Webhooks you have to know the structure. All elements listed here a
 
 ### Account on IFTTT
 
-Visit [IFTTT](https://ifttt.com/) and create an account (if you don't already have one).
+Visit [IFTTT](https://ifttt.com/) and create an account (if you haven't one).
 
 ### Webhook on Discord
 
@@ -122,11 +122,11 @@ Visit [IFTTT](https://ifttt.com/) and create an account (if you don't already ha
 
 ### If `this`
 
-1. Go to [My Applets](https://ifttt.com/my_applets)
+1. Go to [My Applets](https://ifttt.com/my_applets) -> `New Applet`
 1. Click `[+]this`
-1. `Choose a service`. In theory you could use all of them. Some of them need authentification (Twitter, Reddit, Youtube). Don't worry, it's safe ;)
+1. `Choose a service`. In theory, you could use all of them
 1. `Choose the trigger`. Read the description below every trigger and choose the needed one
-1. `Complete trigger fields`
+1. `Complete trigger fields`. There can be more than one step. Read the descriptions and examples
 
 ### Then `that`
 
@@ -136,7 +136,7 @@ Visit [IFTTT](https://ifttt.com/) and create an account (if you don't already ha
 1. Paste your *Webhook URL* to **URL** field
 1. Select `POST` method
 1. Select `application/json` content type
-1. And now the hardest part™. You need to create your JSON body. Follow the structure, use it as an example and don't forget about common sense. Press `+ Ingredient` button and put them into appropriate fields. If something says `URL` put it in "url", if something says `Image`, try to put that into `"image": {"url":""}`. You need to put all objects into curly braces `{ }`. There is no universal solution
+1. And now the hardest part™. You need to create your JSON body. Follow the structure, use it as an example and don't forget about common sense. Press `+ Ingredient` button and put the *Ingredients* into appropriate fields. If something says `URL` put it in `"url":"{{URL}}"`, if something says `ImageURL`, try to put that into `"image": {"url":"{{ImageURL}}"}`.  There's no universal solution
 1. Click `Create Action` and then `Finish`
 1. Done!
 
