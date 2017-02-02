@@ -170,3 +170,11 @@ Visit [IFTTT](https://ifttt.com/) and create an account (if you haven't one).
   ]
 }
 ```
+
+### Youtube
+
+```json
+{
+  "content": "{{Url}}"
+}
+```
