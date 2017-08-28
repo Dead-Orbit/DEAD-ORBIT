@@ -1,3 +1,5 @@
+# New version => <https://birdie0.github.io/discord-webhooks-guide/>
+
 # Discord Webhook
 
 ## It's a JSON
