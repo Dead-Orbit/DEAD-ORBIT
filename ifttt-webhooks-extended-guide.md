@@ -1,4 +1,4 @@
-# New version => <https://birdie0.github.io/discord-webhooks-guide/>
+# [New and currently maintained version](https://birdie0.github.io/discord-webhooks-guide/)
 
 # Discord Webhook
 
