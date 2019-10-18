@@ -133,7 +133,7 @@ Visit [IFTTT](https://ifttt.com/) and create an account (if you haven't one).
 ### Then `that`
 
 1. Click `[+]that`
-1. `Choose the action service`. You need `Maker`. Use the search bar
+1. `Choose the action service`. You need `Webhooks`. Use the search bar
 1. `Choose action`. Choose `Make a web request`
 1. Paste your *Webhook URL* to **URL** field
 1. Select `POST` method
